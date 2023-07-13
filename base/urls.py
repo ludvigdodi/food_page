@@ -40,7 +40,8 @@ urlpatterns = [
     path('aperetize', aperetize_page, name='aperetize_page'),
     path('drink', drink_page, name='drink_page'),
     path('rewiew/<int:pk>', add_comments, name='add_comments'),
-    path("ckeditor5/", include('django_ckeditor_5.urls'), name="ck_editor_5_upload_file"),
+
+    path('ckeditor/', include('ckeditor_uploader.urls')),
 
 
     path('members/', include('django.contrib.auth.urls')),

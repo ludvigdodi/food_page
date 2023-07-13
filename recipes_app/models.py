@@ -1,5 +1,6 @@
 from django.db import models
-from django_ckeditor_5.fields import CKEditor5Field
+from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField
 
 
 # Create your models here.
@@ -9,9 +10,10 @@ class Recipes(models.Model):
     short_desc = models.TextField('Короткий опис', max_length=80, blank=False)
     img = models.ImageField(null=True, blank=True, upload_to="media/", verbose_name='img')
     # text = models.TextField('text')
-    text=CKEditor5Field('Recipe', config_name='extends')
+    text = RichTextUploadingField('Recipe')
     text_second = models.TextField('text', default='-')
     text_third = models.TextField('text', default='-')
+
 
 
     def __str__(self):
