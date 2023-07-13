@@ -1,0 +1,198 @@
+/******************************GLOBAL*********************************/
+html, body {
+    height: 100%; 
+    color: #000000;
+    font-size: 1rem;
+  }
+  body a {
+      text-decoration: none;
+      color: #000000;
+  }
+  
+  body a:hover {
+      text-decoration: underline;
+      color: #000;
+  }
+  
+  body img {
+      padding: 0;
+      margin: 0;
+      max-width:100%;
+      height: 100%;
+  }
+  
+  body h1 {
+      text-align: center;
+      margin-bottom: 30px;
+  }
+  
+  .wrapper {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+  }
+  
+  .main {
+      flex: 1 1 auto;
+  }
+  .fixed-width-btn {
+      width: 145px;
+      margin-right: 5px;
+  }
+
+  figure {
+    text-align: center;
+  }
+  /*****************************END GLOBAL*******************************/
+  
+  
+  /*******************************HEADER*********************************/
+  
+  /**********logo**********/
+  .container-fluid {
+      padding: 0;
+  }
+  .logo {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      height: 80px;
+  }
+  
+  /**********menu**********/
+  .main-menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+  }
+  .nav-link {
+      text-decoration: none;
+      color: #6c757d;
+  }
+  .nav-link:hover {
+      color: #000;
+      text-decoration: underline;
+  }
+  
+  form.user-name {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+  }
+  .reg-log {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+  }
+  
+  /***********burger menu*************/
+  .offcanvas-body {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      overflow-y: auto;
+  }
+  .offcanvas-body ul {
+      font-size: x-large;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      overflow-y: auto;
+  }
+  /*****************************END HEADER******************************/
+  
+  
+  /********************************MAIN*********************************/
+  
+  /**********banner***********/
+  .main-img>.img {
+      width: 100%;
+  }
+  
+  /**********slogan***********/
+  .slogan {
+      text-align: center;
+      margin: 50px auto;
+  }
+  
+  /**********recipe-item**********/
+  .recipe-item {
+      margin-top: 50px;
+  }
+  
+  /************comments***********/
+  .comments {
+      margin-top: 30px;
+  }
+  .view-comment {
+      margin-top: 30px;
+  }
+  /*****************************END MAIN*********************************/
+  
+  
+  /********************************FOOTER***********************************/
+  .footer { 
+      height: 100px;
+      margin-top: 50px;
+  }
+  .footer-menu>.container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      border-top: 1px solid #6c757d;
+      padding-top: 20px;
+  }
+  .footer-rights {
+      text-align: center;
+      margin-top: 10px;
+      font-size: smaller;
+  }
+  /********************************END FOOTER*******************************/
+  
+  
+  /*******************************LOGIN PAGE********************************/
+  .login {
+      text-align: center;
+  }
+  /******************************END LOGIN PAGE*****************************/
+  
+  
+  /******************************RECIPE PAGE********************************/
+
+  /******************************END RECIPE PAGE*****************************/
+  
+  
+  /*****************************BURGER MENU*********************************/
+  
+  
+  
+  @media (min-width: 320px) and (max-width: 767.98px) { 
+      .menu {
+          display: none;
+      }
+      .logo {
+          display: none;
+      }
+   }
+  @media (min-width: 768px) and (max-width: 991.98px) { 
+      .menu {
+          display: none;
+      }
+      .logo {
+          display: none;
+      }
+   }
+  @media (min-width: 992px) and (max-width: 2560px) { 
+      .header-burger {
+          display: none;
+      }
+   }
+  
+  
