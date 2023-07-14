@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
 
-    'tinymce',
 ]
 
 MIDDLEWARE = [
@@ -92,8 +91,8 @@ CKEDITOR_CONFIGS = {
     },
 }
 
-TINYMCE_JS_URL = 'https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js'
-TINYMCE_COMPRESSOR = False
+# TINYMCE_JS_URL = 'https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js'
+# TINYMCE_COMPRESSOR = False
 
 
 WSGI_APPLICATION = 'base.wsgi.application'

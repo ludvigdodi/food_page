@@ -7,7 +7,7 @@
     <div class="container shadow p-4 mb-5 mt-5 bg-body rounded">
         <div class="row">
             <div class="col-12 main-img ">
-                <img src="{% static 'img/11.jpg' %}" class="img" alt="...">
+                <img src="{% static 'img/008.png' %}" class="img" alt="...">
             </div>
         </div>
     </div>
@@ -16,7 +16,7 @@
 <div class="slogan">
     <div class="container">
         <div class="slogan-text">
-            <h5>Закарпатська кухня формувалось протягом багатьох століть - включає в себе традиції і самобутність кухонь багатьох народів.</h5>
+            <h5>Закарпатська кухня формувалась протягом багатьох століть - включає в себе традиції і самобутність кухонь багатьох народів.</h5>
         </div>
       </div>
 </div>
@@ -24,23 +24,24 @@
 <div class="recipe-item">
     <div class="container shadow p-4 mb-5 mt-5 bg-body rounded">
         <div class="row gy-3">
+            <h1>Страви</h1>
 
             {%  for i in recipes %}
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="card h-100 mb-3">
                     <a href="{{i.id}}"><img src="{{i.img.url}}" class="card-img-top" alt="..."></a>
                     <div class="card-body">
-                        {% comment %} <a href="{{i.id}}">
+                        <a href="{{i.id}}">
                             <h5 class="card-title">{{i.name}}</h5>
-                        </a> {% endcomment %}
-                        <h5 class="card-title">{{i.name}}</h5>
+                        </a>
+                        <!--<h5 class="card-title">{{i.name}}</h5>-->
                         <p class="card-text">{{i.short_desc}}</p>
-                        <a href="{{i.id}}">більше...</a>
+                        <!--<a href="{{i.id}}">більше...</a>-->
                     </div>
-                </div> 
+                </div>
             </div>
             {% endfor %}
-            
+
         </div>
     </div>
 </div>
