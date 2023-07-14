@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-m%a@ln_exag%$x&))(2ef4ilji_0w4)3wtdpmp+t95u1q&!8c+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -91,6 +91,10 @@ CKEDITOR_CONFIGS = {
         'toolbar': 'full',
     },
 }
+
+TINYMCE_JS_URL = 'https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js'
+TINYMCE_COMPRESSOR = False
+
 
 WSGI_APPLICATION = 'base.wsgi.application'
 
