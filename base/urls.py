@@ -35,7 +35,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('ckeditor/', include('ckeditor_uploader.urls')),
-    path('tinymce/', include('tinymce.urls')),
 
     path('', main_page, name='index'),
     path('<int:recipe_id>', single_recipe, name='single_recipe'),
