@@ -1,6 +1,7 @@
 from django.db import models
 from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
+from tinymce import models as tinymce_models
 
 
 # Create your models here.
@@ -11,7 +12,7 @@ class Recipes(models.Model):
     img = models.ImageField(null=True, blank=True, upload_to="media/", verbose_name='img')
     # text = models.TextField('text')
     text = RichTextUploadingField('Recipe')
-    text_second = models.TextField('text', default='-')
+    text_second = tinymce_models.HTMLField()
     text_third = models.TextField('text', default='-')
 
 

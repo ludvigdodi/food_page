@@ -33,6 +33,10 @@ from recipes_app.views import add_comments
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    path('ckeditor/', include('ckeditor_uploader.urls')),
+    path('tinymce/', include('tinymce.urls')),
+
     path('', main_page, name='index'),
     path('<int:recipe_id>', single_recipe, name='single_recipe'),
     path('soup', soup_page, name='soup_page'),
@@ -40,8 +44,6 @@ urlpatterns = [
     path('aperetize', aperetize_page, name='aperetize_page'),
     path('drink', drink_page, name='drink_page'),
     path('rewiew/<int:pk>', add_comments, name='add_comments'),
-
-    path('ckeditor/', include('ckeditor_uploader.urls')),
 
 
     path('members/', include('django.contrib.auth.urls')),

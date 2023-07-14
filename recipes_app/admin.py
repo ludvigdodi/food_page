@@ -5,6 +5,3 @@ from recipes_app.models import Recipes, Comments
 admin.site.register(Recipes)
 admin.site.register(Comments)
 
-
-
-

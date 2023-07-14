@@ -43,6 +43,8 @@ INSTALLED_APPS = [
 
     'ckeditor',
     'ckeditor_uploader',
+
+    'tinymce',
 ]
 
 MIDDLEWARE = [
@@ -54,11 +56,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
-# STATIC_URL = '/static/'
-# STATICFILES_DIRS = (os.path.join(BASE_DIR, "static/"),)
-# STATICFILES_DIRS = [STATIC_DIR]
-
 
 
 ROOT_URLCONF = 'base.urls'
@@ -80,16 +77,9 @@ TEMPLATES = [
 ]
 
 STATIC_URL = '/static/'
-STATIC_DIRS = os.path.join(BASE_DIR, 'static')
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = [(os.path.join(BASE_DIR,'static'))]
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
-STATICFILES_DIRS = (
-  os.path.join(BASE_DIR, 'static'),
-)
-
-STATIC_URL = '/static/'
+STATIC_DIRS = os.path.join(BASE_DIR, 'static/')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/')
+STATICFILES_DIRS = [(os.path.join(BASE_DIR,'static/'))]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = 'media/'
