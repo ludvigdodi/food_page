@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="banner">
-    <div class="container shadow p-4 mb-5 mt-5 bg-body rounded">
+    <div class="container shadow p-4 mb-5 mt-4 bg-body rounded">
         <div class="row">
             <div class="col-12 main-img ">
                 <img src="{% static 'img/008.png' %}" class="img" alt="...">
@@ -30,12 +30,12 @@
                 <div class="card h-100 mb-3">
                     <a href="{{i.id}}"><img src="{{i.img.url}}" class="card-img-top" alt="..."></a>
                     <div class="card-body">
-                        {% comment %} <a href="{{i.id}}">
+                        <a href="{{i.id}}">
                             <h5 class="card-title">{{i.name}}</h5>
-                        </a> {% endcomment %}
-                        <h5 class="card-title">{{i.name}}</h5>
+                        </a>
+                        {% comment %} <h5 class="card-title">{{i.name}}</h5> {% endcomment %}
                         <p class="card-text">{{i.short_desc}}</p>
-                        <a href="{{i.id}}">більше...</a>
+                        {% comment %} <a href="{{i.id}}">більше...</a> {% endcomment %}
                     </div>
                 </div> 
             </div>
