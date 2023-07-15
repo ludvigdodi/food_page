@@ -158,7 +158,9 @@ html, body {
       font-size: smaller;
   }
   /********************************END FOOTER*******************************/
-  
+  .footer-rights a {
+    display: inline-block;
+  }
   
   /*******************************LOGIN PAGE********************************/
   .login {
@@ -168,8 +170,10 @@ html, body {
   
   
   /******************************RECIPE PAGE********************************/
-.recipe-content img {
-    text-align: center;
+.recipe-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
   /******************************END RECIPE PAGE*****************************/
   
