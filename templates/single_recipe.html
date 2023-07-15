@@ -1,16 +1,13 @@
-
-<!-- saved from url=(0107)https://www.pythonanywhere.com/user/ludvigdodi/files/home/ludvigdodi/food_page/templates/single_recipe.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body><text>{% extends 'base.html' %}
+{% extends 'base.html' %}
 
 {% load static %}
 
 {% block content %}
-
-</text><div class="recipe-page">
+<div class="recipe-page">
     <div class="container shadow p-4 mb-5 mt-5 bg-body rounded">
         <h1>{{recipe.name}}</h1>
             <div class="recipe-img">
-                {% comment %} <img src="./single_recipe_files/{{recipe.img.url}}" class="rounded" width="400" height="400" alt="голубці"> {% endcomment %}
+                {% comment %} <img src="./www.pythonanywhere.com_user_ludvigdodi_files_home_ludvigdodi_food_page_templates_single_recipe_files/{{recipe.img.url}}" class="rounded" width="400" height="400" alt="голубці"> {% endcomment %}
             </div>
             <div class="recipe-content">
                 <p class="ck-content">{{recipe.text | safe}}</p>
@@ -25,7 +22,8 @@
         <div class="row">
             <h6>ЗАЛИШИТИ КОМЕНТАР : </h6>
             <div>
-                <form action="https://www.pythonanywhere.com/user/ludvigdodi/files/home/ludvigdodi/food_page/templates/%7B%%20url%20&#39;add_comments&#39;%20recipe.id%20%%7D" class="comments" method="post">
+                {% comment %} <form action="{% url 'add_comments' recipe.id %}" class="comments" method="post"> {% endcomment %}
+                <form action="{% url 'add_comments' recipe.id %}" class="comments" method="post">
                     {% csrf_token %}
                     <div class="col-4 mb-3">
                         <label for="exampleFormControlInput1" class="form-label">

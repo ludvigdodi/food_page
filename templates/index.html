@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="banner">
-    <div class="container shadow p-4 mb-5 mt-4 bg-body rounded">
+    <div class="container shadow p-4 mb-5 mt-3 bg-body rounded">
         <div class="row">
             <div class="col-12 main-img ">
                 <img src="{% static 'img/008.png' %}" class="img" alt="...">
@@ -23,8 +23,8 @@
 
 <div class="recipe-item">
     <div class="container shadow p-4 mb-5 mt-5 bg-body rounded">
+        <h1>Рецепти</h1>
         <div class="row gy-3">
-
             {%  for i in recipes %}
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="card h-100 mb-3">
