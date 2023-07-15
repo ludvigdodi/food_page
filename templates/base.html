@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
     <link rel="stylesheet" href="{% static 'ckeditor/ckeditor/content-style.css'%}" type="text/css">
     <link rel="icon" type="image/x-icon" href="{% static 'img/logo.png' %}">
-    <title>Закарпатські смаколики </title>
+    <title>Файні рецепти</title>
 </head>
 <body>
     <div class="wrapper">
@@ -19,11 +19,11 @@
       <header class="header">    
         <div class="container-fluid">
           <div class="logo shadow">
-              <span>Закарпатські</span>
+              <span>Файні</span>
               <a class="logo-link" href="{% url 'index' %}">
                 <img src="{% static 'img/logo.png' %}" alt="Logo" width="60" height="50" class="d-inline-block align-text-top">
               </a>
-              <span>смаколики</span>
+              <span>Рецепти</span>
           </div>
         </div>
 
@@ -32,20 +32,22 @@
           <div class="header-burger">
             <nav class="navbar bg-body-white fixed-top" style="background-color: #ffffff">
               <div class="container">
-              <a class="logo-link" href="{% url 'index' %}">
-                <img src="{% static 'img/logo.png' %}" alt="Logo" width="60" height="50" class="d-inline-block align-text-top">
-              </a>
-              
+                <a class="logo-link" href="{% url 'index' %}">
+                  <img src="{% static 'img/logo.png' %}" alt="Logo" width="60" height="50" class="d-inline-block align-text-top">
+                </a> 
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
                   <div class="offcanvas-header">
                     <a class="logo-link" href="{% url 'index' %}">
                       <img src="{% static 'img/logo.png' %}" alt="Logo" width="60" height="50" class="d-inline-block align-text-top">
-                    </a>      
+                    </a>  
+                    <span class="burger-title">Файні рецепти</span>    
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                   </div>
+
                   <div class="offcanvas-body">
                     <div class="menu-item">
                       <ul class="nav">

@@ -1,7 +1,11 @@
 /******************************GLOBAL*********************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,100&display=swap');
+
 html, body {
     height: 100%; 
     color: #000000;
+    font-family: 'Roboto', sans-serif;
     font-size: 1rem;
   }
   body a {
@@ -60,6 +64,8 @@ html, body {
       align-items: center;
       margin: 0;
       height: 80px;
+      font-family: 'Amatic SC', cursive;
+      font-size: 1.5rem;
   }
   .logo img {
     max-height: 60px;
@@ -109,11 +115,18 @@ html, body {
       align-items: center;
       overflow-y: auto;
   }
+  .burger-title {
+    font-family: 'Amatic SC', cursive;
+    font-size: 2rem;
+  }
   /*****************************END HEADER******************************/
   
   
   /********************************MAIN*********************************/
-  
+  .main-title {
+    font-family: 'Amatic SC', cursive;
+    font-size: 4rem;
+  }
   /**********banner***********/
   .main-img>.img {
       width: 100%;
