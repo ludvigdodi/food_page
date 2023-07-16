@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
     <link rel="stylesheet" href="{% static 'ckeditor/ckeditor/content-style.css'%}" type="text/css">
-    <link rel="icon" type="image/x-icon" href="{% static 'img/logo.png' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
     <title>Файні рецепти</title>
 </head>
 <body>
@@ -19,21 +19,19 @@
       <header class="header">    
         <div class="container-fluid">
           <div class="logo shadow">
-              <span>Файні</span>
               <a class="logo-link" href="{% url 'index' %}">
-                <img src="{% static 'img/logo.png' %}" alt="Logo" width="60" height="50" class="d-inline-block align-text-top">
+                <img src="{% static 'img/logo.png' %}" alt="Logo" width="200" height="200" class="d-inline-block align-text-top">
               </a>
-              <span>Рецепти</span>
           </div>
         </div>
 
-        <div class="container mt-4">
+        <div class="container mt-4 header-second">
           <!--burger menu-->
           <div class="header-burger">
             <nav class="navbar bg-body-white fixed-top" style="background-color: #ffffff">
               <div class="container">
                 <a class="logo-link" href="{% url 'index' %}">
-                  <img src="{% static 'img/logo.png' %}" alt="Logo" width="60" height="50" class="d-inline-block align-text-top">
+                  <img src="{% static 'img/logo.png' %}" alt="Logo" width="100" height="100" class="d-inline-block align-text-top">
                 </a> 
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -42,9 +40,8 @@
 
                   <div class="offcanvas-header">
                     <a class="logo-link" href="{% url 'index' %}">
-                      <img src="{% static 'img/logo.png' %}" alt="Logo" width="60" height="50" class="d-inline-block align-text-top">
+                      <img src="{% static 'img/logo.png' %}" alt="Logo" width="100" height="100" class="d-inline-block align-text-top">
                     </a>  
-                    <span class="burger-title">Файні рецепти</span>    
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                   </div>
 
