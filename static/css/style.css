@@ -34,11 +34,11 @@ html, body {
       min-height: 100%;
       display: flex;
       flex-direction: column;
-      padding: 0 15px;
   }
   
   .main {
       flex: 1 1 auto;
+      padding: 0 15px;
   }
   .fixed-width-btn {
       width: 145px;

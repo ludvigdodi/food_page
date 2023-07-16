@@ -1,7 +1,7 @@
 from django.db import models
+from django.contrib.auth.models import User
 from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
-# from tinymce import models as tinymce_models
 
 
 # Create your models here.
@@ -12,10 +12,6 @@ class Recipes(models.Model):
     img = models.ImageField(null=True, blank=True, upload_to="media/", verbose_name='img')
     # text = models.TextField('text')
     text = RichTextUploadingField('Recipe')
-    text_second = models.TextField('text', default='-')
-    text_third = models.TextField('text', default='-')
-
-
 
     def __str__(self):
         return self.name
@@ -28,6 +24,6 @@ class Comments(models.Model):
     date_added = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f'{self.name}, {self.date_added}, {self.recipe}'
+        return f'{self.name}, {self.text_comments}, {self.date_added}, {self.recipe}'
 
 
