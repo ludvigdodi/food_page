@@ -162,8 +162,11 @@
 
         <!-- Cookie Banner -->
         <div id="cb-cookie-banner" class="alert alert-dark text-center mb-0" role="alert" style="background-color: #fff3cd">
-          Цей веб-сайт використовує файли cookie. Файли <a href="#" target="blank"><b>cookie</b></a> запам'ятовують ваші дії та налаштування для кращого використання Інтернету.
-          <button type="button" class="btn btn-outline-secondary" onclick="window.cb_hideCookieBanner()">Я згоден(-на)</button>
+          Цей веб-сайт використовує файли cookie. Файли <b>cookie</b> запам'ятовують ваші дії та налаштування для кращого використання Інтернету.
+          <div class="btn-group">
+            <a href="{% url 'cookies'%}" class="btn btn-secondary btn-sm">Детальніше</a>
+            <button type="button" class="btn btn-primary btn-sm" onclick="window.cb_hideCookieBanner()">Зрозуміло</button>
+          </div>
         </div>
         <!-- End of Cookie Banner -->
 
@@ -191,8 +194,11 @@
                                 <a class="nav-link" href="{% url 'drink_page'%}">Напої</a>
                               </li>
                           </ul>
+                          <div class="about-politic">
+                            <span><a href="{% url 'cookies' %}" target="blank">Політика конфіденційності</a></span>
+                          </div>
                           <div class="col-12 footer-rights">
-                              <span>Файні Рецепти(c) <a class="nav-link" href="https://www.linkedin.com/in/liudvyk-dodi-b73583151/">ludvig_dodi 2023</a></span>
+                            <span>Файні Рецепти(c) <a class="nav-link" href="https://www.linkedin.com/in/liudvyk-dodi-b73583151/">ludvig_dodi 2023</a></span>                              
                           </div>
                       </div>
                   </div>

@@ -29,7 +29,7 @@ from recipes_app.views import dish_page
 from recipes_app.views import aperetize_page
 from recipes_app.views import drink_page
 from recipes_app.views import add_comments
-
+from recipes_app.views import cookies
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -47,6 +47,7 @@ urlpatterns = [
 
     path('members/', include('django.contrib.auth.urls')),
     path('members/', include('members_app.urls')),
+    path('cookies/', cookies, name='cookies'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
