@@ -44,5 +44,3 @@ def add_comments(request, pk):
         form.recipe_id = pk
         form.save()
     return redirect(f'/{pk}')
-
-
