@@ -7,10 +7,8 @@
 <div class="recipe-item">
     <div class="container shadow p-4 mb-5 mt-5 bg-body rounded">
         <h1>Супи </h1>
-
         <div class="row gy-3">
-            {%  for i in soup %}
-            {% if i.food_type == 'soup' %}
+            {% for i in soup %}
             <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                 <div class="card h-100 mb-3">
                     <a href="{{i.id}}"><img src="{{i.img.url}}" class="card-img-top" alt="..."></a>
@@ -22,7 +20,6 @@
                     </div>
                 </div> 
             </div>            
-            {% endif %}
             {% endfor %}
         </div>
     </div>

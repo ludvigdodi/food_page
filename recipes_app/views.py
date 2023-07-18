@@ -6,9 +6,7 @@ from .form import CommentsForm
 # Create your views here.
 
 def main_page(request):
-
     recipes = Recipes.objects.all()
-
     return render(request, 'index.html', {'recipes': recipes})
 
 
@@ -18,22 +16,22 @@ def single_recipe(request, recipe_id):
 
 
 def soup_page(request):
-    soup = Recipes.objects.all()
+    soup = Recipes.objects.filter(food_type="soup")
     return render(request, 'soup_page.html', context={'soup': soup})
     
 
 def dish_page(request):
-    dish = Recipes.objects.all()
+    dish = Recipes.objects.filter(food_type='dish')
     return render(request, 'dish_page.html', context={'dish': dish})
 
 
 def aperetize_page(request):
-    aperetize = Recipes.objects.all()
+    aperetize = Recipes.objects.filter(food_type='aperetize')
     return render(request, 'aperetize_page.html', context={'aperetize': aperetize})
 
 
 def drink_page(request):
-    drink = Recipes.objects.all()
+    drink = Recipes.objects.filter(food_type='drink')
     return render(request, 'drink_page.html', context={'drink': drink})
 
 

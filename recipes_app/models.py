@@ -10,7 +10,6 @@ class Recipes(models.Model):
     food_type = models.CharField('Тип їжі', max_length=20, blank=False, default='')
     short_desc = models.TextField('Короткий опис', max_length=80, blank=False)
     img = models.ImageField(null=True, blank=True, upload_to="media/", verbose_name='img')
-    # text = models.TextField('text')
     text = RichTextUploadingField('Recipe')
 
     def __str__(self):

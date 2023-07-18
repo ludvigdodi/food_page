@@ -9,8 +9,7 @@
         <h1>Другі страви </h1>
 
         <div class="row gy-3">
-            {%  for i in dish %}
-            {% if i.food_type == 'dish' %}
+            {% for i in dish %}
             <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                 <div class="card h-100 mb-3">
                     <a href="{{i.id}}"><img src="{{i.img.url}}" class="card-img-top" alt="..."></a>
@@ -21,8 +20,7 @@
                     <p class="card-text">{{i.short_desc}}</p>
                     </div>
                 </div> 
-            </div>              
-            {% endif %}
+            </div>             
             {% endfor %}
         </div>
     </div>
