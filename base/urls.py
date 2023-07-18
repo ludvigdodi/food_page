@@ -22,14 +22,14 @@ from django.conf import settings
 
 
 
-from recipes_app.views import main_page
-from recipes_app.views import single_recipe
-from recipes_app.views import soup_page
-from recipes_app.views import dish_page
-from recipes_app.views import aperetize_page
-from recipes_app.views import drink_page
-from recipes_app.views import add_comments
-from recipes_app.views import cookies
+from my_apps.recipes_app.views import main_page
+from my_apps.recipes_app.views import single_recipe
+from my_apps.recipes_app.views import soup_page
+from my_apps.recipes_app.views import dish_page
+from my_apps.recipes_app.views import aperetize_page
+from my_apps.recipes_app.views import drink_page
+from my_apps.recipes_app.views import add_comments
+from my_apps.recipes_app.views import cookies
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -44,9 +44,8 @@ urlpatterns = [
     path('drink', drink_page, name='drink_page'),
     path('rewiew/<int:pk>', add_comments, name='add_comments'),
 
-
     path('users/', include('django.contrib.auth.urls')),
-    path('users/', include('users_app.urls')),
+    path('users/', include('my_apps.users_app.urls')),
     
     path('cookies/', cookies, name='cookies'),
 

@@ -38,8 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'recipes_app',
-    'users_app',
+    'my_apps.recipes_app',
+    'my_apps.users_app',
 
     'ckeditor',
     'ckeditor_uploader',

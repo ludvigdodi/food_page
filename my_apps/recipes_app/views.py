@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from recipes_app.models import Recipes
-from recipes_app.models import Comments
+from my_apps.recipes_app.models import Recipes
+from my_apps.recipes_app.models import Comments
 from .form import CommentsForm
 
 # Create your views here.
