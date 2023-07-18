@@ -45,8 +45,8 @@ urlpatterns = [
     path('rewiew/<int:pk>', add_comments, name='add_comments'),
 
 
-    path('members/', include('django.contrib.auth.urls')),
-    path('members/', include('members_app.urls')),
+    path('users/', include('django.contrib.auth.urls')),
+    path('users/', include('users_app.urls')),
     
     path('cookies/', cookies, name='cookies'),
 
