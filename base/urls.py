@@ -44,8 +44,8 @@ urlpatterns = [
     path('drink', drink_page, name='drink_page'),
     path('rewiew/<int:pk>', add_comments, name='add_comments'),
 
-    path('users/', include('django.contrib.auth.urls')),
-    path('users/', include('my_apps.users_app.urls')),
+    path('users/authenticate/', include('django.contrib.auth.urls')),
+    path('users/authenticate/', include('my_apps.users_app.urls')),
     
     path('cookies/', cookies, name='cookies'),
 
