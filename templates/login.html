@@ -10,15 +10,16 @@
         <div>
             <form action="" method="post">
                 {% csrf_token %}
-                <div class="mb-3">
+                <div class="login-field col-3 mb-3">
                     <label for="exampleFormControlInput1" class="form-label">
                         <input type="text" class="form-control" name="username">
                     </label>
                 </div>
-                <div class=" mb-3">
+                <div class="login-field col-3 mb-3">
                     <label for="exampleFormControlInput1" class="form-label">
                         <input type="password" class="form-control" name='password'>
-                    </label>                        
+                    </label>
+                    <a href="#" class="new-password">Забули пароль?</a>                     
                 </div>
                 <div>
                     <button type="submit" class="btn btn-outline-secondary">Підтвердити</button>
