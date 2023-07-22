@@ -19,34 +19,22 @@ from django.urls import path, include
 
 from django.conf.urls.static import static
 from django.conf import settings
-
-
-
-from my_apps.recipes_app.views import main_page
-from my_apps.recipes_app.views import single_recipe
-from my_apps.recipes_app.views import soup_page
-from my_apps.recipes_app.views import dish_page
-from my_apps.recipes_app.views import aperetize_page
-from my_apps.recipes_app.views import drink_page
-from my_apps.recipes_app.views import add_comments
-from my_apps.recipes_app.views import cookies
+from my_apps.recipes_app.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 
+    # ckeditor for admin-page
     path('ckeditor/', include('ckeditor_uploader.urls')),
 
-    path('', main_page, name='index'),
-    path('<int:recipe_id>', single_recipe, name='single_recipe'),
-    path('soup', soup_page, name='soup_page'),
-    path('dish', dish_page, name='dish_page'),
-    path('aperetize', aperetize_page, name='aperetize_page'),
-    path('drink', drink_page, name='drink_page'),
-    path('rewiew/<int:pk>', add_comments, name='add_comments'),
+    # recipes_app urls
+    path('', include('my_apps.recipes_app.urls')),
 
+    # users_app urls
     path('users/authenticate/', include('django.contrib.auth.urls')),
     path('users/authenticate/', include('my_apps.users_app.urls')),
     
+    # cookies page
     path('cookies/', cookies, name='cookies'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
