@@ -66,7 +66,6 @@
                         </li>
                       </ul>
                     </div>
-
                     <div class="login-item">
                       {% if user.is_authenticated %}
                         <form method="link" action="{% url 'logout'%}" class="user-name">
@@ -156,9 +155,28 @@
           {% endif %}
         </div>
 
-        {% block content %}
-        {% endblock content %} 
+        <div class="search mt-5">
+          <center>
+            <div class="container">
+              <div class="search">
+                <div class="raw">
+                  <div class="col-8">
+                    <form class="d-flex" method=POST action="{% url 'search_page' %}">
+                      {% csrf_token %}
+                      <input class="form-control me-2" type="search" placeholder="Пошук..." aria-label="Search" name="searched">
+                      <button class="btn btn-outline-secondary" type="submit">Search</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </center>
+        </div>
 
+        <div class="content mt-5">
+          {% block content %}
+          {% endblock content %}   
+        </div>
 
         <!-- Cookie Banner -->
         <div id="cb-cookie-banner" class="alert alert-dark text-center mb-0" role="alert" style="background-color: #ffffff">

@@ -34,6 +34,13 @@ def drink_page(request):
     drink = Recipes.objects.filter(food_type='drink')
     return render(request, 'drink_page.html', context={'drink': drink})
 
+def search_page(request):
+    if request.method == 'POST':
+        searched = request.POST['searched']
+        recipes = Recipes.objects.filter(name__contains=searched)
+        return render(request, 'search_page.html', {'searched': searched, 'recipes': recipes})
+    else:
+        return render(request, 'search_page.html', {})
 
 def add_comments(request, pk):
     form = CommentsForm(request.POST)

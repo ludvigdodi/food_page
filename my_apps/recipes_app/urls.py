@@ -15,4 +15,5 @@ urlpatterns = [
     path('aperetize', aperetize_page, name='aperetize_page'),
     path('drink', drink_page, name='drink_page'),
     path('rewiew/<int:pk>', add_comments, name='add_comments'),
+    path('search', search_page, name='search_page'),
 ]
