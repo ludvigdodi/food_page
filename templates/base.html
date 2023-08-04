@@ -160,7 +160,7 @@
             <div class="container">
               <div class="search">
                 <div class="raw">
-                  <div class="col-6">
+                  <div class="col-xl-6 col-lg-8 col-md-10 col-sm-12">
                     <form class="d-flex" method=POST action="{% url 'search_page' %}">
                       {% csrf_token %}
                       <input class="form-control me-2" type="search" placeholder="Введіть назву страви ..." aria-label="Search" name="searched" value="{{searched|upper}}">
