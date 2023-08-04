@@ -37,7 +37,7 @@ def drink_page(request):
 def search_page(request):
     if request.method == 'POST':
         searched = request.POST['searched']
-        recipes = Recipes.objects.filter(name__contains=searched)
+        recipes = Recipes.objects.filter(name__icontains=searched)
         return render(request, 'search_page.html', {'searched': searched, 'recipes': recipes})
     else:
         return render(request, 'search_page.html', {})

@@ -110,7 +110,7 @@ html, body {
   .offcanvas-body ul {
       font-size: x-large;
       display: flex;
-      flex-direction: column-reverse;
+      flex-direction: column;
       justify-content: space-around;
       align-items: center;
       overflow-y: auto;
@@ -192,6 +192,7 @@ html, body {
   .login-field {
     display: flex;
     flex-direction: column;
+    min-width: 130px;
     margin: 0 auto;
     margin-bottom: 1rem!important;
   }
