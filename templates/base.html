@@ -179,11 +179,10 @@
         </div>
 
         <!-- Cookie Banner -->
-        <div id="cb-cookie-banner" class="alert alert-dark text-center mb-0" role="alert" style="background-color: #ffffff">
-          Цей веб-сайт використовує файли cookie. Файли <b>cookie</b> запам'ятовують ваші дії та налаштування для кращого використання Інтернету.
+        <div id="cb-cookie-banner" class="alert alert-dark text-center mb-0" role="alert" style="background-color: #fff">
+          Цей веб-сайт використовує файли cookie. Файли <b><a href="{% url 'cookies'%}">cookies</a></b> запам'ятовують ваші дії та налаштування для кращого використання Інтернету
           <div class="btn-group">
-            <a href="{% url 'cookies'%}" class="btn btn-secondary btn-sm">Детальніше</a>
-            <button type="button" class="btn btn-primary btn-sm" onclick="window.cb_hideCookieBanner()">Зрозуміло</button>
+            <button type="button" class="btn btn-outline-secondary btn-sm" onclick="window.cb_hideCookieBanner()">Зрозуміло</button>
           </div>
         </div>
         <!-- End of Cookie Banner -->
